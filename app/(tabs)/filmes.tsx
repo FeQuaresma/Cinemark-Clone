@@ -54,106 +54,18 @@ export default function Filmes() {
 }
 
 const EmCartaz = () => (
-  <ScrollView style={styles.scene}>
-    <View style={styles.moviePosterDiv}>
-      <Image
-        style={styles.moviePoster}
-        source={{
-          uri: "https://play-lh.googleusercontent.com/bSU-78MeP8ouJN3djUXV6d8pJEBKk9sZyGLKMW4Vme37ErMb4i47kJ065Ap7MvYglkrwXb4n6E-O9O2rCgM",
-        }}
-      />
-      <Text style={styles.moviePosterText}>Enaldinho</Text>
-    </View>
-    <View style={styles.moviePosterDiv}>
-      <Image
-        style={styles.moviePoster}
-        source={{
-          uri: "https://play-lh.googleusercontent.com/bSU-78MeP8ouJN3djUXV6d8pJEBKk9sZyGLKMW4Vme37ErMb4i47kJ065Ap7MvYglkrwXb4n6E-O9O2rCgM",
-        }}
-      />
-      <Text style={styles.moviePosterText}>Enaldinho</Text>
-    </View>
-    <View style={styles.moviePosterDiv}>
-      <Image
-        style={styles.moviePoster}
-        source={{
-          uri: "https://play-lh.googleusercontent.com/bSU-78MeP8ouJN3djUXV6d8pJEBKk9sZyGLKMW4Vme37ErMb4i47kJ065Ap7MvYglkrwXb4n6E-O9O2rCgM",
-        }}
-      />
-      <Text style={styles.moviePosterText}>Enaldinho</Text>
-    </View>
-    <View style={styles.moviePosterDiv}>
-      <Image
-        style={styles.moviePoster}
-        source={{
-          uri: "https://play-lh.googleusercontent.com/bSU-78MeP8ouJN3djUXV6d8pJEBKk9sZyGLKMW4Vme37ErMb4i47kJ065Ap7MvYglkrwXb4n6E-O9O2rCgM",
-        }}
-      />
-      <Text style={styles.moviePosterText}>Enaldinho</Text>
-    </View>
-    <View style={styles.moviePosterDiv}>
-      <Image
-        style={styles.moviePoster}
-        source={{
-          uri: "https://play-lh.googleusercontent.com/bSU-78MeP8ouJN3djUXV6d8pJEBKk9sZyGLKMW4Vme37ErMb4i47kJ065Ap7MvYglkrwXb4n6E-O9O2rCgM",
-        }}
-      />
-      <Text style={styles.moviePosterText}>Enaldinho</Text>
-    </View>
-    <View style={styles.moviePosterDiv}>
-      <Image
-        style={styles.moviePoster}
-        source={{
-          uri: "https://play-lh.googleusercontent.com/bSU-78MeP8ouJN3djUXV6d8pJEBKk9sZyGLKMW4Vme37ErMb4i47kJ065Ap7MvYglkrwXb4n6E-O9O2rCgM",
-        }}
-      />
-      <Text style={styles.moviePosterText}>Enaldinho</Text>
-    </View>
-    <View style={styles.moviePosterDiv}>
-      <Image
-        style={styles.moviePoster}
-        source={{
-          uri: "https://play-lh.googleusercontent.com/bSU-78MeP8ouJN3djUXV6d8pJEBKk9sZyGLKMW4Vme37ErMb4i47kJ065Ap7MvYglkrwXb4n6E-O9O2rCgM",
-        }}
-      />
-      <Text style={styles.moviePosterText}>Enaldinho</Text>
-    </View>
-    <View style={styles.moviePosterDiv}>
-      <Image
-        style={styles.moviePoster}
-        source={{
-          uri: "https://play-lh.googleusercontent.com/bSU-78MeP8ouJN3djUXV6d8pJEBKk9sZyGLKMW4Vme37ErMb4i47kJ065Ap7MvYglkrwXb4n6E-O9O2rCgM",
-        }}
-      />
-      <Text style={styles.moviePosterText}>Enaldinho</Text>
-    </View>
-    <View style={styles.moviePosterDiv}>
-      <Image
-        style={styles.moviePoster}
-        source={{
-          uri: "https://play-lh.googleusercontent.com/bSU-78MeP8ouJN3djUXV6d8pJEBKk9sZyGLKMW4Vme37ErMb4i47kJ065Ap7MvYglkrwXb4n6E-O9O2rCgM",
-        }}
-      />
-      <Text style={styles.moviePosterText}>Enaldinho</Text>
-    </View>
-    <View style={styles.moviePosterDiv}>
-      <Image
-        style={styles.moviePoster}
-        source={{
-          uri: "https://play-lh.googleusercontent.com/bSU-78MeP8ouJN3djUXV6d8pJEBKk9sZyGLKMW4Vme37ErMb4i47kJ065Ap7MvYglkrwXb4n6E-O9O2rCgM",
-        }}
-      />
-      <Text style={styles.moviePosterText}>Enaldinho</Text>
-    </View>
-    <View style={styles.moviePosterDiv}>
-      <Image
-        style={styles.moviePoster}
-        source={{
-          uri: "https://play-lh.googleusercontent.com/bSU-78MeP8ouJN3djUXV6d8pJEBKk9sZyGLKMW4Vme37ErMb4i47kJ065Ap7MvYglkrwXb4n6E-O9O2rCgM",
-        }}
-      />
-      <Text style={styles.moviePosterText}>Enaldinho</Text>
-    </View>
+  <ScrollView contentContainerStyle={styles.scene}>
+ {Array.from({ length: 12 }).map((_, index) => (
+      <View key={index} style={styles.moviePosterDiv}>
+        <Image
+          style={styles.moviePoster}
+          source={{
+            uri: "https://play-lh.googleusercontent.com/bSU-78MeP8ouJN3djUXV6d8pJEBKk9sZyGLKMW4Vme37ErMb4i47kJ065Ap7MvYglkrwXb4n6E-O9O2rCgM",
+          }}
+        />
+        <Text style={styles.moviePosterText}>Enaldinho</Text>
+      </View>
+    ))}
   </ScrollView>
 );
 
@@ -193,12 +105,12 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
   scene: {
-    flex: 1,
+    justifyContent: "center",
     flexDirection: "row",
     flexWrap: "wrap",
   },
   moviePosterDiv: {
-    margin: 20,
+    margin: 10,
   },
   moviePoster: {
     width: 150,
